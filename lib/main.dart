@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'basic-widgets.dart';
 import 'helloworld.dart';
+
 void main() => runApp(MyApp());
 
-final Map<String, Widget>_introList = {
-  'Hello World': HelloWorld(),
-};
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -37,6 +36,11 @@ class MyHomePage extends StatelessWidget {
 
   final String title;
 
+  final Map<String, Widget>_introList = {
+    'Hello World': HelloWorld(),
+    'Basic Widgets': BasicWidgets(),
+  };
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -54,7 +58,6 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
     );
-    return null;
   }
 
   Widget _buildMenu(String menu, context) {
