@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'basic-widgets.dart';
+import 'handling-gestures.dart';
 import 'helloworld.dart';
+import 'using-material-components.dart';
 
 void main() => runApp(MyApp());
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -31,14 +32,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-
   MyHomePage({Key key, this.title});
 
   final String title;
 
-  final Map<String, Widget>_introList = {
+  final Map<String, Widget> _introList = {
     'Hello World': HelloWorld(),
     'Basic Widgets': BasicWidgets(),
+    'Using Material Components': TutorialHome(),
+    'Handling Gestures': MyButton(),
   };
 
   @override
@@ -46,31 +48,29 @@ class MyHomePage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-          title: Text(title),
+        title: Text(title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: _introList.keys.map(
-                  (String menu) => _buildMenu(menu, context)
-          ).toList(),
+          children: _introList.keys
+              .map((String menu) => _buildMenu(menu, context))
+              .toList(),
         ),
       ),
     );
   }
 
   Widget _buildMenu(String menu, context) {
-    return FlatButton(
+    return RaisedButton(
+      elevation: 4.0,
       onPressed: () {
         print("You clicked " + menu);
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => _introList[menu])
-        );
+            context, MaterialPageRoute(builder: (context) => _introList[menu]));
       },
       child: Text(menu),
     );
   }
 }
-
