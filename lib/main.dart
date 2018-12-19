@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'alltogether.dart';
 import 'basic-widgets.dart';
+import 'changing-widgets.dart';
+import 'changing-widgets2.dart';
 import 'handling-gestures.dart';
 import 'helloworld.dart';
 import 'using-material-components.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -25,6 +27,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
         backgroundColor: Colors.white,
+          buttonTheme: ButtonThemeData(
+            buttonColor: Theme
+                .of(context)
+                .primaryColor,
+            textTheme: ButtonTextTheme.primary,
+          )
       ),
       home: MyHomePage(title: 'Introduction to Widgets'),
     );
@@ -41,6 +49,16 @@ class MyHomePage extends StatelessWidget {
     'Basic Widgets': BasicWidgets(),
     'Using Material Components': TutorialHome(),
     'Handling Gestures': MyButton(),
+    'Changing Widgets - Flow down': Counter(),
+    'Changing Widgets - Flow up': Counter2(),
+    'Shopping List - All together': ShoppingList(
+      products: <Product>[
+        Product(name: 'Eggs'),
+        Product(name: 'Flour'),
+        Product(name: 'Chocolate chips'),
+        Product(name: 'Icecream'),
+      ],
+    )
   };
 
   @override

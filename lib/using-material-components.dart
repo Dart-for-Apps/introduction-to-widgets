@@ -8,7 +8,9 @@ class TutorialHome extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           tooltip: 'Navigation menu',
-          onPressed: null,
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text('Using Material Components'),
         actions: <Widget>[
