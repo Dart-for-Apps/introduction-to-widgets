@@ -8,9 +8,9 @@
 
 - [Hello World](hello-world.md#hello-world)
 - [Basic widgets](hello-world.md#basic-widgets)
-- [Using Material Components](using-material-components.md)
-- [Handling gestures](handling-gestures.md)
-- [Changing widgets in response to input](changing-widgets-in-response-to-input.md)
+- [Using Material Components](material-components.md#Using-Material-Components)
+- [Handling gestures](material-components.md#Handling-gestures)
+- [Changing widgets in response to input](changing-widgets.md)
 - [Bringing it all together](bringing-it-all-together.md)
 - [Responding to widget lifecycle events](responding-to-widget-lifecycle-events.md)
 - [Keys](keys.md)
