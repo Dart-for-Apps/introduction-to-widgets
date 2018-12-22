@@ -11,10 +11,10 @@
 - [Using Material Components](material-components.md#Using-Material-Components)
 - [Handling gestures](material-components.md#Handling-gestures)
 - [Changing widgets in response to input](changing-widgets.md)
-- [Bringing it all together](bringing-it-all-together.md)
-- [Responding to widget lifecycle events](responding-to-widget-lifecycle-events.md)
-- [Keys](keys.md)
-- [Global Keys](keys.md)
+- [Bringing it all together](summary.md)
+- [Responding to widget lifecycle events](summary.md)
+- [Keys](summary.md)
+- [Global Keys](summary.md)
 
 ## 실행 방법
 
